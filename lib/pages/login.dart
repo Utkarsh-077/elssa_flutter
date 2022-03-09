@@ -130,6 +130,29 @@ class Login extends StatelessWidget {
                         ),
                       ),
 
+                      Padding(padding: EdgeInsets.all(10)),
+                       Material(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8),
+                        child: InkWell(
+                            //
+                            //splashColor: Colors.white,
+                          onTap: () => Navigator.pushNamed(context, "/otp"),
+                          child: AnimatedContainer(
+                            height: 40,
+                            width: 200,
+                            alignment: Alignment.center,
+                            child: Text("forgot your password", style: TextStyle(
+                              color: Colors.black,
+                              //fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),),
+                             duration: Duration(seconds: 1,),
+                          ),
+                        ),
+                      ),
+                      
+
                       
                       
                     ],

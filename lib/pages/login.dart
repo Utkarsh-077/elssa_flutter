@@ -41,19 +41,21 @@ class Login extends StatelessWidget {
 
                       Material(
                         color: Colors.deepPurple,
-                        borderRadius: BorderRadius.circular(12),
-                        child: Ink(
-                          width: 400,
-                          height: 50,
-                          
-                          //color: Colors.deepPurple,
-                          child: Padding(
-                            padding: EdgeInsets.all(2),
-                            child: Wrap(
+                        borderRadius: BorderRadius.circular(24),
+                        child: InkWell(
+                          onTap: () {
                             
+                          },
+                          //color: Colors.deepPurple,
+                          child: Container(
+                            height: 54,
+                            width: 300,
+                            padding: EdgeInsets.all(4),
+                            child: Wrap(
+                              alignment: WrapAlignment.start,
                               crossAxisAlignment: WrapCrossAlignment.center,
                               children: [
-                                Icon(Icons.g_mobiledata_outlined, color: Colors.white, size: 50.0,), // <-- Use 'Image.asset(...)' here
+                                Icon(Icons.g_mobiledata_outlined, color: Colors.white, size: 45.0,), // <-- Use 'Image.asset(...)' here
                                 SizedBox(width: 12),
                                 Text('Continue with google', style: TextStyle(color:Colors.white ),),
                               ],
@@ -67,21 +69,28 @@ class Login extends StatelessWidget {
                        Material(
                         
                         color: Colors.deepPurple,
-                        borderRadius: BorderRadius.circular(12),
-                        child: Ink(
+                        borderRadius: BorderRadius.circular(24),
+                        child: InkWell(
                           
-                          width: 400,
-                          height: 50,
+                          onTap: () {
+                            
+                          },
+
                           
                           //color: Colors.deepPurple,
-                          child: Padding(
-                            padding: EdgeInsets.all(6),
+                          child: Container(
+                            height: 54,
+                            width: 300,
+                            padding: EdgeInsets.all(10),
                             child: Wrap(
+                              alignment: WrapAlignment.start,
                               crossAxisAlignment: WrapCrossAlignment.center,
                               children: [
-                                Icon(Icons.facebook_rounded, color: Colors.white,size: 40.0,),//Image.asset("assets/images/facebook.png"),
+                                Icon(Icons.facebook_rounded, color: Colors.white,size: 30.0,),//Image.asset("assets/images/facebook.png"),
                                 SizedBox(width: 12),
                                 Text('Continue with Facebook', style: TextStyle(color:Colors.white ),),
+
+
                               ],
                             ),
                           ),
@@ -92,7 +101,10 @@ class Login extends StatelessWidget {
                       
                       Padding(padding: EdgeInsets.all(10)),
 
-                      Text("Or Continue with phone number"),
+                      Text("Or Continue with phone number", style: TextStyle(
+                        color: Colors.grey,
+
+                      ),),
 
                       Padding(padding: EdgeInsets.all(10)),
                       IntlPhoneField(
@@ -108,29 +120,31 @@ class Login extends StatelessWidget {
                             },
                         ),
 
-                      
+                      Padding(padding: EdgeInsets.all(10)),
                       Material(
+                        
                         color: Colors.black,
-                        borderRadius: BorderRadius.circular(8),
+                        borderRadius: BorderRadius.circular(24),
                         child: InkWell(
                             //
                             //splashColor: Colors.white,
                           onTap: () => Navigator.pushNamed(context, "/home"),
-                          child: AnimatedContainer(
+                          child: Container(
                             height: 50,
-                            width: 150,
+                            width: 400,
                             alignment: Alignment.center,
                             child: Text("LOG IN", style: TextStyle(
                               color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
+                              fontWeight: FontWeight.normal,
+                              fontSize: 16,
+
                             ),),
-                             duration: Duration(seconds: 1,),
+                             
                           ),
                         ),
                       ),
 
-                      Padding(padding: EdgeInsets.all(10)),
+                      Padding(padding: EdgeInsets.all(2)),
                        Material(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(8),
@@ -142,16 +156,32 @@ class Login extends StatelessWidget {
                             height: 40,
                             width: 200,
                             alignment: Alignment.center,
-                            child: Text("forgot your password", style: TextStyle(
+                            child: Text("Forgot Password?", style: TextStyle(
                               color: Colors.black,
-                              //fontWeight: FontWeight.bold,
-                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
                             ),),
                              duration: Duration(seconds: 1,),
                           ),
                         ),
                       ),
-                      
+                      SizedBox(height: 20,),
+                     Row(
+                       mainAxisAlignment: MainAxisAlignment.center,
+                       children: [Text("DON'T HAVE AN ACCOUNT? ", style: TextStyle(
+                         fontSize: 16,
+                         color: Colors.grey,
+                         fontWeight: FontWeight.bold,
+
+                       ),),
+                      InkWell(
+                        onTap: () => {},
+                        child: Text("SIGN UP", style: TextStyle(
+                        color: Colors.blue,
+                         fontSize: 16,
+                         fontWeight: FontWeight.bold,
+                      ),),)
+                     ],)
 
                       
                       

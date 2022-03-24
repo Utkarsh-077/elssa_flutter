@@ -7,12 +7,23 @@ class Signup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
+
+        
         color: Colors.white,
         child: SingleChildScrollView(
           child: Form(
             
             child: Column(
               children: [
+                Padding(padding: EdgeInsets.all(30)),
+                Text(
+                  "ELLSA",
+                  style: TextStyle(
+                    //fontStyle: FontStyle.italic,
+                     fontSize: 28,
+                   fontWeight: FontWeight.normal,
+                  ),
+                ),
                 Image.asset(
                   "assets/images/login.png",
                   fit: BoxFit.cover,
@@ -21,10 +32,20 @@ class Signup extends StatelessWidget {
                   height: 20.0,
                 ),
                 Text(
-                  "Your home service expert",
+                  "Your Home services Expert",
                   style: TextStyle(
-                    fontSize: 28,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 10,),
+                Text(
+                  "Continue with Phone Number",
+                  
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey,
                   ),
                 ),
                 SizedBox(
@@ -55,46 +76,63 @@ class Signup extends StatelessWidget {
           
                       Material(
                         color: Colors.black,
-                        borderRadius: BorderRadius.circular(8),
+                        borderRadius: BorderRadius.circular(24),
                         child: InkWell(
                             //
                             //splashColor: Colors.white,
                           onTap: () => Navigator.pushNamed(context, "/home"),
                           child: AnimatedContainer(
                             height: 50,
-                            width: 150,
+                            width: 400,
                             alignment: Alignment.center,
                             child:Text("SIGN UP", style: TextStyle(
                               color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
+                              fontWeight: FontWeight.normal,
+                              fontSize: 16,
                             ),),
                              duration: Duration(seconds: 1,),
                           ),
                         ),
                       ),
 
-                      Padding(padding: EdgeInsets.all(10)),
+                      Padding(padding: EdgeInsets.all(4)),
                        Material(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(8),
+                       
                         child: InkWell(
                             //
                             //splashColor: Colors.white,
                           onTap: () => Navigator.pushNamed(context, "/login"),
-                          child: AnimatedContainer(
-                            height: 20,
-                            width: 75,
+                          child: Container(
                             alignment: Alignment.center,
-                            child: Text("LOG IN", style: TextStyle(
-                              color: Colors.black,
-                              //fontWeight: FontWeight.bold,
-                              fontSize: 18,
-                            ),),
-                             duration: Duration(seconds: 1,),
+                            child: Text("View Other Option",
+                        style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.blue,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),),
+                            
                           ),
                         ),
-                      ),
+                      
+                    SizedBox(height: 20,),
+                     Row(
+                       mainAxisAlignment: MainAxisAlignment.center,
+                       children: [Text("ALREADY HAVE AN ACCOUNT? ", style: TextStyle(
+                         fontSize: 16,
+                         color: Colors.grey,
+                         fontWeight: FontWeight.bold,
+
+                       ),),
+                      InkWell(
+                        onTap: () => {},
+                        child: Text("LOG IN", style: TextStyle(
+                        color: Colors.blue,
+                         fontSize: 16,
+                         fontWeight: FontWeight.bold,
+                      ),),)
+                     ],),
                       
                     ],
                   ),

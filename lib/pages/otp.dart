@@ -7,15 +7,16 @@ class OTP extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-        color: Colors.white,
-        child: SingleChildScrollView(
+    return Scaffold(
+    
+      
+        body: SingleChildScrollView(
           child: Form(
             
             child: Column(
               children: [
                 Image.asset(
-                  "assets/images/login.png",
+                  "assets/images/otp.png",
                   fit: BoxFit.cover,
                 ),
                 SizedBox(
